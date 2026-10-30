@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+openpyxl
+sqlalchemy
+python-dotenv
+pytest
+# --- pick ONE database driver ---
+pymysql          # MySQL   (also: pip install cryptography)
+# pyodbc         # SQL Server (also install Microsoft ODBC Driver 18 for SQL Server)
+# --- optional ---
+# anthropic      # Claude API

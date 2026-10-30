@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE
+.idea/
+
+# Testing
+.pytest_cache/
+
+# Secrets
+.env
+
+# Generated CSV reports
+outputs/*.csv
+
+# Scratch files
+explore.py
+
+# Private notes
+docs/INTERVIEW_GUIDE.md
+
+# Unnecessary files
+*.zip
+*.db
