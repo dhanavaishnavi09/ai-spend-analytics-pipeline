@@ -28,8 +28,13 @@ The two job descriptions ask for exactly this mix: SQL + Python + data accuracy 
 ## 2. Project structure
 
 ```
-spend-ai-pipeline/
+Spend-Ai-pipeline/
 |-- run_pipeline.py              # the orchestrator: runs every step in order
+|-- dashboard/
+|    |-- SpendDashboard.pbix
+├── docs/
+│   └── images/
+│       └── dashboard.png
 |-- src/
 |   |-- generate_data.py         # Step 1: creates messy synthetic invoice data
 |   |-- vendor_norm.py           # Step 2: standardises vendor names
@@ -37,15 +42,20 @@ spend-ai-pipeline/
 |   |-- dq_checks.py             # Step 4: data quality checks
 |   |-- insights.py              # Step 6: facts + LLM/template narrative
 |   |-- report.py                # Step 7: builds the Excel report
-|-- sql/queries.sql              # Step 5: 7 business SQL queries
+|-- sql/                         # Step 5: 7 business SQL queries
+│   ├── queries.sql
+│   └── sqlserver/
+│       ├── queries.sql
+│       ├── schema.sql
+│       └── views.sql
 |-- tests/test_pipeline.py       # unit tests
 |-- src/db.py                    # optional MySQL / SQL Server loader
 |-- sql/mysql, sql/sqlserver     # database-specific schema, queries, views
-|-- docs/POWERBI_GUIDE.md        # Step 9: dashboard + DAX guide
-|-- docs/INTERVIEW_GUIDE.md      # how to explain + interview Q&A
 |-- data/raw_invoices.csv        # generated raw input
-|-- outputs/                     # Spend_Analytics_Report.xlsx, clean_spend.csv, sql_*.csv
+|-- outputs/ 
+|     └── Spend_Analytics_Report.xlsx                    # Spend_Analytics_Report.xlsx, 
 ```
+
 
 ## 3. How to run
 
